@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # 修改默认IP
-# sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 更改默认 Shell 为 zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
-# TTYD 免登录
-# sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+# TTYD 免输入用户名
+sed -i 's|/bin/login|/bin/login root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
-sed -i 's|LibWrt|NineBomb|g' package/base-files/files/bin/config_generate
+sed -i 's/LibWrt/NineBomb/g' package/base-files/files/bin/config_generate
 # 移除要替换的包
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/msd_lite
@@ -31,7 +31,8 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-#git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome #广告屏蔽
+git clone --depth=1 https://github.com/ZeaKyX/luci-app-speedtest-web package/luci-app-speedtest-web #网页测速
 #git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 #git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
 #git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
@@ -43,8 +44,13 @@ function git_sparse_clone() {
 
 # 科学上网插件
 #git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+rm -rf package/openwrt-passwall/trojan
+rm -rf package/openwrt-passwall/trojan-plus
+rm -rf package/openwrt-passwall/trojan-go
+rm -rf package/openwrt-passwall/sing-box
+# 删除默认并不需要要编译进固件的可能不用的依赖
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
