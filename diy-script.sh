@@ -33,8 +33,8 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome #广告屏蔽
-git clone --depth=1 https://github.com/ZeaKyX/luci-app-speedtest-web package/luci-app-speedtest-web #网页测速
+#git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome #广告屏蔽
+#git clone --depth=1 https://github.com/ZeaKyX/luci-app-speedtest-web package/luci-app-speedtest-web #网页测速
 #git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 #git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
 #git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
@@ -46,12 +46,12 @@ git clone --depth=1 https://github.com/ZeaKyX/luci-app-speedtest-web package/luc
 
 # 科学上网插件
 #git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
-rm -rf package/openwrt-passwall/trojan
-rm -rf package/openwrt-passwall/trojan-plus
-rm -rf package/openwrt-passwall/trojan-go
-rm -rf package/openwrt-passwall/sing-box
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+#rm -rf package/openwrt-passwall/trojan
+#rm -rf package/openwrt-passwall/trojan-plus
+#rm -rf package/openwrt-passwall/trojan-go
+#rm -rf package/openwrt-passwall/sing-box
 # 删除默认并不需要要编译进固件的可能不用的依赖
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 #git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
