@@ -111,6 +111,7 @@ jobs:
     - name: Compile Firmware(开始编译固件)
       id: compile
       run: |
+        cat feeds.conf.default
         cd $OPENWRT_PATH
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
