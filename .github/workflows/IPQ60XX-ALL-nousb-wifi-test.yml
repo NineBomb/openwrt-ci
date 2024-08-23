@@ -13,7 +13,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: IPQ60XX-ALL-No-usb-Wifi
+  FIRMWARE_TAG: IPQ60XX-ALL-No-usb-Wifi1Gtest
   TZ: Asia/Shanghai
 
 jobs:
