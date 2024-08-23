@@ -1,4 +1,4 @@
-name: IPQ60XX-ALL-nousb-wifi
+name: IPQ60XX-ALL-nousb-wifi-test
 
 on:
   workflow_dispatch:
