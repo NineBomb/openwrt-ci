@@ -6,7 +6,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede.git
   REPO_BRANCH: master
-  CONFIG_FILE: configs/ipq60xx-nousb-wifi-test.config
+  CONFIG_FILE: configs/ipq60xx-all.config.bak
   DIY_SCRIPT: diy-script.sh
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
