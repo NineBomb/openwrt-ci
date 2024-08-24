@@ -1,17 +1,17 @@
-name: king-owtest-nousb-wifi
+name: lede-nousb-wifi
 
 on:
   workflow_dispatch:
   
 env:
-  REPO_URL: https://github.com/King-Of-Knights/openwrt-6.x.git
-  REPO_BRANCH: test
+  REPO_URL: https://github.com/coolsnowwolf/lede.git
+  REPO_BRANCH: master
   CONFIG_FILE: configs/ipq60xx-nousb-wifi-test.config
   DIY_SCRIPT: diy-script.sh
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: king-owtest-nousb-wifi
+  FIRMWARE_TAG: lede-nousb-wifi
   TZ: Asia/Shanghai
 
 jobs:
