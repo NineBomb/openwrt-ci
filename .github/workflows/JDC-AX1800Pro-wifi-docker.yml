@@ -1,4 +1,4 @@
-name: lede-nousb-wifi
+name: JDC-AX1800Pro-wifi-docker
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: lede-nousb-wifi
+  FIRMWARE_TAG: JDC-AX1800Pro-wifi-docker
   TZ: Asia/Shanghai
 
 jobs:
