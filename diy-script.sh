@@ -11,8 +11,10 @@ sed -i "s/\.ssid=.*/\.ssid=NineBomb/g" $(find ./package/kernel/mac80211/ ./packa
 
 # TTYD 免输入用户名
 sed -i 's|/bin/login|/bin/login root|g' feeds/packages/utils/ttyd/files/ttyd.config
-
+#修改主机名
 sed -i 's/LibWrt/NineBomb/g' package/base-files/files/bin/config_generate
+#修复cpu无法调频BUG
+sed -i 's/START=15/START=99/g' feeds/base/emortal/cpufreq/files/cpufreq.init
 # 移除要替换的包
 #rm -rf feeds/packages/net/mosdns
 #rm -rf feeds/packages/net/msd_lite
