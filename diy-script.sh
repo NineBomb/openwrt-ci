@@ -15,6 +15,8 @@ sed -i 's|/bin/login|/bin/login root|g' feeds/packages/utils/ttyd/files/ttyd.con
 sed -i 's/LibWrt/NineBomb/g' package/base-files/files/bin/config_generate
 #修复cpu无法调频BUG
 sed -i 's/START=15/START=99/g' feeds/base/emortal/cpufreq/files/cpufreq.init
+#fix bug M2 cpu freq too high which can't really work on it
+sed -i '38c uci_write_config 0 schedutil 864000 1608000' feeds/base/emortal/cpufreq/files/cpufreq.uci
 # 移除要替换的包
 #rm -rf feeds/packages/net/mosdns
 #rm -rf feeds/packages/net/msd_lite
